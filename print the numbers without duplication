@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+ int n,i,j,count;
+ printf("Enter the value of n:");
+ scanf("%d",&n);
+ int arr[n];
+ for(i=0;i<n;i++)
+ {
+    scanf("%d",&arr[i]);
+ }
+ for(i=0;i<n;i++)
+ {
+    count=0;
+    for(j=i+1;j<n;j++)
+    {
+     if(arr[i] == arr[j])
+     {
+        count++;
+     }
+     }
+    if(count == 0 )
+    {
+      printf("unique value:%d\n",arr[i]);
+    }
+ }
+ return 0;
+}
